@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "main": "dist/app.js",
- 
   "scripts": {
     "dev": "nodemon app.js",
     "build": "babel . --out-dir dist --ignore node_modules",
-    "start": "node dist/app.js"
+    "start": "node dist/app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +24,12 @@
     "@babel/cli": "^7.28.0",
     "@babel/core": "^7.28.0",
     "@babel/node": "^7.28.0",
-    "@babel/preset-env": "^7.28.0"
+    "@babel/preset-env": "^7.28.0",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-node": "^11.1.0",
+    "prettier": "^3.1.0",
+    "husky": "^8.0.3"
   }
 }

@@ -1,10 +1,13 @@
 {
   "name": "expresslearner",
   "version": "1.0.0",
-  "main": "app.js",
+  "type": "module",
+  "main": "dist/app.js",
+ 
   "scripts": {
-    "dev": "nodemon app.js"
-    
+    "dev": "nodemon app.js",
+    "build": "babel . --out-dir dist --ignore node_modules",
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
